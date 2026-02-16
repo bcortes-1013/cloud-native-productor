@@ -11,5 +11,5 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=buildstage /app/target/*.jar app.jar
 EXPOSE 8080
-# Fíjate: Aquí NO hay Wallet ni parámetros de Oracle
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
